@@ -1,137 +1,29 @@
 <!doctype html>
 <html lang="en">
 <head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home | DemoStore Pakistan</title>
+<meta name="description" content="Demo ecommerce store for practicing GA4, GTM and Meta Pixel.">
 <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-N9R473S3"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 </script>
+<link rel="stylesheet" href="styles.css">
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>DemoStore Pakistan | Practice Store</title>
-  <meta name="description" content="A fictional ecommerce store for practicing Meta Pixel, GA4 and Google Tag Manager.">
-  <style>
-    :root{--ink:#17211d;--muted:#68736d;--line:#e6ebe7;--paper:#f7f9f7;--green:#174d3a;--accent:#d6a85f}
-    *{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--ink);background:#fff}
-    .top{background:var(--green);color:#fff;text-align:center;padding:9px 16px;font-size:13px;letter-spacing:.3px}
-    header{max-width:1160px;margin:auto;padding:22px 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
-    .brand{font-weight:850;font-size:22px;letter-spacing:-.7px}.brand span{color:#b27a2e}
-    .cart{border:1px solid var(--line);border-radius:999px;padding:10px 15px;background:white;font-weight:700}
-    main{max-width:1160px;margin:auto;padding:34px 24px 70px}
-    .hero{background:linear-gradient(115deg,#edf3ee,#f7f1e7);border-radius:20px;padding:46px 42px;margin-bottom:42px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .eyebrow{color:var(--green);font-size:12px;font-weight:800;letter-spacing:1.7px;text-transform:uppercase}
-    h1{font-size:clamp(32px,5vw,54px);line-height:1.05;letter-spacing:-2px;margin:12px 0}
-    .hero p{color:#59645d;max-width:480px;line-height:1.6;margin-bottom:0}
-    .hero-mark{font-size:100px;line-height:1;filter:saturate(.7)}
-    h2{font-size:26px;letter-spacing:-.7px;margin:0 0 7px}.sub{color:var(--muted);margin:0 0 22px}
-    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
-    .product{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff}
-    .photo{height:220px;display:grid;place-items:center;font-size:78px;background:#f2f4f1}
-    .product:nth-child(2) .photo{background:#f3eee7}.product:nth-child(3) .photo{background:#edf1f5}
-    .product:nth-child(4) .photo{background:#f6f0e8}.product:nth-child(5) .photo{background:#edf3ef}.product:nth-child(6) .photo{background:#f3eef3}
-    .info{padding:17px}.category{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700}
-    .name{font-size:17px;font-weight:750;margin:7px 0}.price{font-weight:800;color:var(--green);margin-bottom:14px}
-    button{cursor:pointer;font:inherit}.add{width:100%;background:var(--green);color:white;border:0;border-radius:9px;padding:12px;font-weight:750}
-    .add:hover{background:#103b2c}.notice{margin-top:26px;background:#fff8e9;border:1px solid #f0dfbd;border-radius:12px;padding:14px 16px;color:#725421;font-size:13px;line-height:1.5}
-    footer{background:#f7f9f7;padding:24px;text-align:center;color:var(--muted);font-size:13px}
-    .toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:#17211d;color:#fff;padding:12px 18px;border-radius:999px;opacity:0;pointer-events:none;transition:opacity .2s;box-shadow:0 8px 30px #0002}
-    .toast.show{opacity:1}
-    @media(max-width:760px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{padding:32px 24px}.hero-mark{font-size:65px}}
-    @media(max-width:500px){header{padding:18px}.grid{grid-template-columns:1fr 1fr;gap:12px}main{padding:24px 14px 50px}.photo{height:150px;font-size:58px}.info{padding:12px}.name{font-size:14px}.hero-mark{display:none}.hero{padding:28px 22px}}
-  </style>
-  <!-- OPTIONAL: Add your GTM container snippet here after deployment. See README. -->
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({event: "demo_store_loaded", page_type: "home"});
-  </script>
 </head>
 <body>
-  <div class="top">FREE SHIPPING ON DEMO ORDERS · PRACTICE STORE ONLY</div>
-  <header>
-    <div class="brand">DEMO<span>STORE</span> PAKISTAN</div>
-    <div class="cart" aria-label="Cart item count">Cart <span id="cart-count">0</span></div>
-  </header>
-  <main>
-    <section class="hero">
-      <div>
-        <div class="eyebrow">Everyday essentials</div>
-        <h1>Good finds.<br>Better prices.</h1>
-        <p>A fictional online store built for hands-on digital marketing practice. Explore products and test your tracking setup.</p>
-      </div>
-      <div class="hero-mark" aria-hidden="true">🛍️</div>
-    </section>
-    <section>
-      <h2>Popular products</h2>
-      <p class="sub">Demo products with sample prices in Pakistani rupees.</p>
-      <div class="grid" id="product-grid">
-        <article class="product" data-id="DS001" data-name="Everyday Water Bottle" data-price="1299">
-          <div class="photo">🧴</div><div class="info"><div class="category">Lifestyle</div><div class="name">Everyday Water Bottle</div><div class="price">Rs. 1,299</div><button class="add">Add to Cart</button></div>
-        </article>
-        <article class="product" data-id="DS002" data-name="Classic Canvas Tote" data-price="1899">
-          <div class="photo">👜</div><div class="info"><div class="category">Accessories</div><div class="name">Classic Canvas Tote</div><div class="price">Rs. 1,899</div><button class="add">Add to Cart</button></div>
-        </article>
-        <article class="product" data-id="DS003" data-name="Wireless Headphones" data-price="4499">
-          <div class="photo">🎧</div><div class="info"><div class="category">Electronics</div><div class="name">Wireless Headphones</div><div class="price">Rs. 4,499</div><button class="add">Add to Cart</button></div>
-        </article>
-        <article class="product" data-id="DS004" data-name="Desk Organizer" data-price="1599">
-          <div class="photo">🗂️</div><div class="info"><div class="category">Home</div><div class="name">Desk Organizer</div><div class="price">Rs. 1,599</div><button class="add">Add to Cart</button></div>
-        </article>
-        <article class="product" data-id="DS005" data-name="Minimal Notebook Set" data-price="899">
-          <div class="photo">📓</div><div class="info"><div class="category">Stationery</div><div class="name">Minimal Notebook Set</div><div class="price">Rs. 899</div><button class="add">Add to Cart</button></div>
-        </article>
-        <article class="product" data-id="DS006" data-name="Travel Coffee Mug" data-price="2199">
-          <div class="photo">☕</div><div class="info"><div class="category">Lifestyle</div><div class="name">Travel Coffee Mug</div><div class="price">Rs. 2,199</div><button class="add">Add to Cart</button></div>
-        </article>
-      </div>
-      <div class="notice"><strong>Practice environment:</strong> No real products are sold and no payments or personal information are collected. Add-to-cart clicks send a GA4-style <code>add_to_cart</code> event to <code>dataLayer</code> for GTM testing.</div>
-    </section>
-  </main>
-  <footer>DemoStore Pakistan · A fictional training website · No real checkout</footer>
-  <div class="toast" id="toast" role="status">Added to cart</div>
-  <script>
-    let cartCount = 0;
-    const currency = "PKR";
-    document.querySelectorAll(".product").forEach((card) => {
-      const item = {
-        item_id: card.dataset.id,
-        item_name: card.dataset.name,
-        price: Number(card.dataset.price),
-        quantity: 1
-      };
-      // GA4 recommended event: view_item_list is pushed when the product grid is shown.
-      card.querySelector(".add").addEventListener("click", () => {
-        cartCount += 1;
-        document.getElementById("cart-count").textContent = cartCount;
-        window.dataLayer.push({ ecommerce: null });
-        window.dataLayer.push({
-          event: "add_to_cart",
-          ecommerce: {
-            currency,
-            value: item.price,
-            items: [item]
-          }
-        });
-        const toast = document.getElementById("toast");
-        toast.textContent = item.item_name + " added to cart";
-        toast.classList.add("show");
-        setTimeout(() => toast.classList.remove("show"), 1600);
-      });
-    });
-    window.dataLayer.push({ ecommerce: null });
-    window.dataLayer.push({
-      event: "view_item_list",
-      ecommerce: {
-        item_list_name: "Popular products",
-        items: [...document.querySelectorAll(".product")].map(card => ({
-          item_id: card.dataset.id,
-          item_name: card.dataset.name,
-          price: Number(card.dataset.price),
-          quantity: 1
-        }))
-      }
-    });
-  </script>
-</body>
-</html>
+<div class="top">DEMO STORE · PRACTICE CHECKOUT · NO REAL PAYMENTS</div>
+<header>
+  <a class="brand" href="index.html">DEMO<span>STORE</span> PAKISTAN</a>
+  <nav><a href="index.html">Home</a><a href="index.html#products">Products</a><a class="cart-link" href="cart.html">Cart (<span data-cart-count>0</span>)</a></nav>
+</header>
+<main>
+<section class="hero"><div class="eyebrow">Everyday essentials</div><h1>Good finds.<br>Better prices.</h1><p>Explore our demo products and practise the complete ecommerce tracking journey.</p><a class="button" href="#products">Shop products</a></section>
+<section id="products"><h2>Popular products</h2><p class="sub">Sample products with demo prices in Pakistani rupees.</p><div class="grid" id="product-grid"></div></section>
+<div class="notice">Practice store only. Add products to cart, proceed to demo checkout and test tracking events. No real payment is taken.</div>
+</main>
+<footer>DemoStore Pakistan · Fictional training website · No real products sold or payments collected</footer>
+<script src="app.js"></script>
+</body></html>

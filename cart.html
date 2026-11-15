@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shopping cart | DemoStore Pakistan</title>
+<meta name="description" content="Demo ecommerce store for practicing GA4, GTM and Meta Pixel.">
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-N9R473S3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+<div class="top">DEMO STORE · PRACTICE CHECKOUT · NO REAL PAYMENTS</div>
+<header>
+  <a class="brand" href="index.html">DEMO<span>STORE</span> PAKISTAN</a>
+  <nav><a href="index.html">Home</a><a href="index.html#products">Products</a><a class="cart-link" href="cart.html">Cart (<span data-cart-count>0</span>)</a></nav>
+</header>
+<main><h1>Your cart</h1><p class="sub">Review the products you added.</p><div id="cart-items"></div><div class="panel" id="cart-summary"></div></main>
+<footer>DemoStore Pakistan · Fictional training website · No real products sold or payments collected</footer>
+<script src="app.js"></script>
+</body></html>

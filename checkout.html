@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checkout | DemoStore Pakistan</title>
+<meta name="description" content="Demo ecommerce store for practicing GA4, GTM and Meta Pixel.">
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-N9R473S3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+<div class="top">DEMO STORE · PRACTICE CHECKOUT · NO REAL PAYMENTS</div>
+<header>
+  <a class="brand" href="index.html">DEMO<span>STORE</span> PAKISTAN</a>
+  <nav><a href="index.html">Home</a><a href="index.html#products">Products</a><a class="cart-link" href="cart.html">Cart (<span data-cart-count>0</span>)</a></nav>
+</header>
+<main><h1>Checkout</h1><p class="sub">Demo checkout only. Do not enter real personal or payment details.</p>
+<form id="checkout-form" class="panel"><div class="form-grid">
+<div class="field"><label>First name</label><input name="first_name" required placeholder="Demo"></div>
+<div class="field"><label>Last name</label><input name="last_name" required placeholder="Customer"></div>
+<div class="field full"><label>Email (use a fake test email)</label><input name="email" type="email" required placeholder="demo@example.com"></div>
+<div class="field full"><label>Demo delivery address</label><textarea name="address" required rows="3" placeholder="123 Demo Street"></textarea></div>
+</div><div id="checkout-total" class="panel"></div><button type="submit">Place demo order</button></form>
+<div id="order-result"></div></main>
+<footer>DemoStore Pakistan · Fictional training website · No real products sold or payments collected</footer>
+<script src="app.js"></script>
+</body></html>
